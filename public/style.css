@@ -1,0 +1,252 @@
+:root {
+  --honey: #f2a900;
+  --honey-dark: #c98700;
+  --dark: #2b2118;
+  --bg: #fffaf0;
+  --card-bg: #ffffff;
+  --border: #e8d9b5;
+  --danger: #b3261e;
+  --ok: #2e7d32;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--dark);
+}
+
+header {
+  background: var(--dark);
+  color: white;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tab-button {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.tab-button.active {
+  background: var(--honey);
+  border-color: var(--honey);
+  color: var(--dark);
+  font-weight: 600;
+}
+
+main {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  padding: 0 1rem 3rem;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.panel {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  color: #55483a;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 4rem;
+}
+
+button {
+  background: var(--honey);
+  color: var(--dark);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--honey-dark);
+}
+
+button.secondary {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--dark);
+}
+
+.hive-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.hive-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hive-card:hover {
+  border-color: var(--honey);
+}
+
+.hive-card .hive-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.hive-card .hive-meta {
+  font-size: 0.85rem;
+  color: #6b5b45;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge.feeding {
+  background: #fde3a7;
+  color: #6b4b00;
+}
+
+.badge.overdue {
+  background: #f8d7d5;
+  color: var(--danger);
+}
+
+.badge.ok {
+  background: #d9ecda;
+  color: var(--ok);
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.checkbox-grid label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.checkbox-grid input {
+  width: auto;
+  margin: 0;
+}
+
+.inspection-entry {
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 0;
+}
+
+.inspection-entry:last-child {
+  border-bottom: none;
+}
+
+.inspection-entry .observations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.35rem 0;
+}
+
+.observation-tag {
+  background: #f1e6c9;
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  font-size: 0.78rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.inline-row {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.inline-row label {
+  flex: 1;
+  min-width: 140px;
+}
+
+.box-total-row {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.close-detail {
+  float: right;
+}

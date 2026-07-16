@@ -1,0 +1,16 @@
+{
+  "name": "bee-hive-tracker",
+  "version": "1.0.0",
+  "description": "A honey bee hive and inspection tracker",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bee Hive Tracker</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <h1>🐝 Bee Hive Tracker</h1>
+    <nav>
+      <button class="tab-button active" data-tab="hives">Hives</button>
+      <button class="tab-button" data-tab="overdue">Overdue Inspections</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="tab-hives" class="tab-panel active">
+      <div class="panel">
+        <h2>Add a Hive</h2>
+        <form id="add-hive-form">
+          <label>
+            Name / Number
+            <input type="text" name="name" required maxlength="100" placeholder="e.g. Hive 3" />
+          </label>
+          <label>
+            Location
+            <input type="text" name="location" maxlength="200" placeholder="e.g. Back garden, north corner" />
+          </label>
+          <button type="submit">Add Hive</button>
+        </form>
+      </div>
+
+      <div class="panel">
+        <h2>Your Hives</h2>
+        <div id="hive-list" class="hive-list"></div>
+      </div>
+
+      <div id="hive-detail" class="panel hidden"></div>
+    </section>
+
+    <section id="tab-overdue" class="tab-panel">
+      <div class="panel">
+        <h2>Overdue Inspections</h2>
+        <label>
+          Flag hives not inspected in the last
+          <input type="number" id="overdue-days" min="1" value="7" />
+          days
+        </label>
+        <div id="overdue-list" class="hive-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
