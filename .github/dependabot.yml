@@ -1,0 +1,15 @@
+version: 2
+updates:
+  # Keep npm dependencies up to date, and open PRs automatically when a
+  # dependency has a known security vulnerability.
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+
+  # Keep the GitHub Actions workflows themselves up to date too.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
