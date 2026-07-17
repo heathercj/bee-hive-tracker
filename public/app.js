@@ -104,7 +104,7 @@ async function openHiveDetail(hiveId) {
     <p class="hive-meta">${escapeHtml(hive.location || 'No location set')}</p>
 
     <label class="inline-row">
-      <input type="checkbox" id="feeding-toggle" ${hive.feeding ? 'checked' : ''} style="width:auto" />
+      <input type="checkbox" id="feeding-toggle" ${hive.feeding ? 'checked' : ''} />
       Currently feeding this hive
     </label>
 
@@ -146,8 +146,8 @@ async function openHiveDetail(hiveId) {
         Inspection date
         <input type="date" name="inspectionDate" required value="${new Date().toISOString().slice(0, 10)}" />
       </label>
-      <label class="inline-row" style="max-width:220px">
-        <input type="checkbox" name="queenSpotted" style="width:auto" /> Queen spotted
+      <label class="inline-row queen-spotted-row">
+        <input type="checkbox" name="queenSpotted" /> Queen spotted
       </label>
       <div class="checkbox-grid">
         <label><input type="checkbox" name="eggs" /> Eggs</label>
